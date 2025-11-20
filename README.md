@@ -32,4 +32,5 @@ Terminal:
 Recuerda que todos los archivos .h deben estar en la misma carpeta que el archivo main.
 
 `g++ main.cpp -o calculadora`
+
 `.\calculadora.exe`
