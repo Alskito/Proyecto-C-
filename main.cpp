@@ -7,9 +7,9 @@
 
 int main(){
 
-    Moto moto_1("Kawasaki", "Ninja h2r", 1172063, 2022, 20000);
-    Coche coche_1("Kia", "K3 Ex pack", 450000, 2025, 5000);
-    Camioneta camioneta_1("Ford", "Lobo Raptor", 2424100, 2025, 40000);
+    Moto moto_1("Kawasaki", "Ninja h2r", 1172063, 2022, 20000, 600);
+    Coche coche_1("Kia", "K3 Ex pack", 450000, 2025, 5000, 4);
+    Camioneta camioneta_1("Ford", "Lobo Raptor", 2424100, 2025, 40000, 800);
 
     // Moto
     std::cout << "COMPROBACION MOTO" << std::endl;
@@ -34,6 +34,10 @@ int main(){
     moto_1.set_kilometraje(100000);
     std::cout << moto_1.get_kilometraje() << std::endl;
 
+    std::cout << "\n" << moto_1.get_cc() << std::endl;
+    moto_1.set_cc(267);
+    std::cout << moto_1.get_cc() << std::endl;
+
     // Coche
     std::cout << "\n" << "COMPROBACION COCHE" << std::endl;
 
@@ -57,6 +61,11 @@ int main(){
     coche_1.set_kilometraje(100000);
     std::cout << coche_1.get_kilometraje() << std::endl;
 
+    std::cout << "\n" << coche_1.get_puertas() << std::endl;
+    coche_1.set_puertas(2);
+    std::cout << coche_1.get_puertas() << std::endl;
+
+
     // Camioneta
     std::cout << "\n" << "COMPROBACION CAMIONETA" << std::endl;
 
@@ -79,6 +88,10 @@ int main(){
     std::cout << "\n" << camioneta_1.get_kilometraje() << std::endl;
     camioneta_1.set_kilometraje(10);
     std::cout << camioneta_1.get_kilometraje() << std::endl;
+
+    std::cout << "\n" << camioneta_1.get_capacidad_carga() << std::endl;
+    camioneta_1.set_capacidad_carga(9999);
+    std::cout << camioneta_1.get_capacidad_carga() << std::endl;
 
     return 0;
 }
