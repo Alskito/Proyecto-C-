@@ -17,5 +17,15 @@ El objetivo de este codigo es crear un sistema que permita organizar la informac
 - Cada clase almacena los datos principales del vehículo: marca, modelo, precio base, año y kilometraje.
 - Proporciona métodos para acceder a estos datos mediante getters.
 
-En este primer avance, el programa todavía no calcula el precio final de venta, solamente modela los vehículos y permite acceder a su información.
-Mi plan a futuro es que el usuario pueda ingresar un vehiculo y que directamente le calcule el precio de venta o algo de ese estilo.
+El programa permite agregar vehículos, ya sean motos, coches o camionetas, y calcular automáticamente el precio de venta de cada uno. El usuario solo debe ingresar los datos del vehículo, como la marca o el kilometraje. 
+
+# Compilación
+El programa solo ha sido probado en Windows, por lo que las instrucciones están pensadas únicamente para este sistema operativo.
+
+Visual studio code:
+Hasta ahora no he tenido ningún problema al ejecutar el código en VS Code, pero recomiendo usar la terminal de Windows por si acaso.
+
+Termninal:
+Recuerda que todos los archivos .h deben estar en la misma carpeta que el archivo main.
+'g++ main.cpp -o calculadora'
+'.\calculadora.exe'
