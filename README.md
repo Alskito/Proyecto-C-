@@ -1,4 +1,4 @@
-# Caculadora de venta 
+# Caculadora de precio de venta 
 
 Una empresa quiere determinar el precio por el cual puede vender diferentes vehículos.
 Cada tipo de vehículo (moto, coche y camioneta) puede tener un precio final diferente dependiendo de su:
@@ -6,18 +6,14 @@ Cada tipo de vehículo (moto, coche y camioneta) puede tener un precio final dif
 - Precio base
 - Año
 - Kilometraje
-- Modelo
-- Marca
+- cc, puertas o capacidad de carga
 
-El objetivo de este codigo es crear un sistema que permita organizar la información de cada vehículo y preparar el cálculo de su precio final de venta.
+El objetivo de este programa es crear un sistema que permita organizar la información de cada vehículo y preparar el cálculo de su precio final de venta.
 
 # El programa
 
-- Define tres clases independientes: Moto, Coche y Camioneta.
-- Cada clase almacena los datos principales del vehículo: marca, modelo, precio base, año y kilometraje.
-- Proporciona métodos para acceder a estos datos mediante getters.
-
-El programa permite agregar vehículos, ya sean motos, coches o camionetas, y calcular automáticamente el precio de venta de cada uno. El usuario solo debe ingresar los datos del vehículo, como la marca o el kilometraje. 
+El programa es un menú desde el cual el usuario puede agregar vehículos, ya sean motos, coches o camionetas, y ver los vehículos en una lista junto con sus precios de venta
+POR FAVOR SIGAN LAS INSTRUCCIONES.
 
 # Compilación
 
@@ -30,6 +26,7 @@ Hasta ahora no he tenido ningún problema al ejecutar el código en VS Code, per
 Terminal:
 
 Recuerda que todos los archivos .h deben estar en la misma carpeta que el archivo main.
+Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y aparezcan simbolos extraños, simplemente ignoralos.
 
 `g++ main.cpp -o calculadora`
 
