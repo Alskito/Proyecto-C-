@@ -1,97 +1,111 @@
 #include<iostream>
 #include<string>
-#include "Camioneta.h"
-#include "Coche.h"
-#include "Moto.h"
+#include <windows.h> // Solo es para que se vean los emojis
+#include "Concesionaria.h"
+
 
 
 int main(){
+    SetConsoleOutputCP(CP_UTF8); // Solo es para que se vean los emojis
 
-    Moto moto_1("Kawasaki", "Ninja h2r", 1172063, 2022, 20000, 600);
-    Coche coche_1("Kia", "K3 Ex pack", 450000, 2025, 5000, 4);
-    Camioneta camioneta_1("Ford", "Lobo Raptor", 2424100, 2025, 40000, 800);
+    Concesionaria Concesionaria_Benito_Juarez_IDK;
+    int opcion = 0;
+    std::string t_marca;
+    std::string t_modelo;
+    int t_precio;
+    int t_year;
+    int t_km;
+    int t_extra;
 
-    // Moto
-    std::cout << "COMPROBACION MOTO" << std::endl;
+    do {
 
-    std::cout << "\n" << moto_1.get_marca() << std::endl;
-    moto_1.set_marca("BROMM");
-    std::cout << moto_1.get_marca() << std::endl;
-
-    std::cout << "\n" << moto_1.get_modelo() << std::endl;\
-    moto_1.set_modelo("Pan");
-    std::cout << moto_1.get_modelo() << std::endl;
-
-    std::cout << "\n" << moto_1.get_precio_original() << std::endl;
-    moto_1.set_precio_original(5);
-    std::cout << moto_1.get_precio_original() << std::endl;
-
-    std::cout << "\n" << moto_1.get_year() << std::endl;
-    moto_1.set_year(2011);
-    std::cout << moto_1.get_year() << std::endl;
-
-    std::cout << "\n" << moto_1.get_kilometraje() << std::endl;
-    moto_1.set_kilometraje(100000);
-    std::cout << moto_1.get_kilometraje() << std::endl;
-
-    std::cout << "\n" << moto_1.get_cc() << std::endl;
-    moto_1.set_cc(267);
-    std::cout << moto_1.get_cc() << std::endl;
-
-    // Coche
-    std::cout << "\n" << "COMPROBACION COCHE" << std::endl;
-
-    std::cout << "\n" << coche_1.get_marca() << std::endl;
-    coche_1.set_marca("MARCA RANDOM IDK");
-    std::cout << coche_1.get_marca() << std::endl;
-
-    std::cout << "\n" << coche_1.get_modelo() << std::endl;\
-    coche_1.set_modelo("EL RASHO MCQUEEN");
-    std::cout << coche_1.get_modelo() << std::endl;
-
-    std::cout << "\n" << coche_1.get_precio_original() << std::endl;
-    coche_1.set_precio_original(99999);
-    std::cout << coche_1.get_precio_original() << std::endl;
-
-    std::cout << "\n" << coche_1.get_year() << std::endl;
-    coche_1.set_year(2000);
-    std::cout << coche_1.get_year() << std::endl;
-
-    std::cout << "\n" << coche_1.get_kilometraje() << std::endl;
-    coche_1.set_kilometraje(100000);
-    std::cout << coche_1.get_kilometraje() << std::endl;
-
-    std::cout << "\n" << coche_1.get_puertas() << std::endl;
-    coche_1.set_puertas(2);
-    std::cout << coche_1.get_puertas() << std::endl;
+        std::cout << "\n=================================================" << std::endl;
+        std::cout << "      APLICACION PARA GESTIONAR PRECIOS :d     " << std::endl;
+        std::cout << "=================================================" << std::endl;
+        std::cout << "1. Agregar MOTO 🏍️" << std::endl;
+        std::cout << "2. Agregar COCHE 🏎️" << std::endl;
+        std::cout << "3. Agregar CAMIONETA 🚗" << std::endl;
+        std::cout << "4. Mostrar Precios de Venta 💰" << std::endl;
+        std::cout << "5. Salir 👋😊" << std::endl;
+        std::cout << "-----------------------------------------" << std::endl;
+        std::cout << "Selecciona una opcion(1 al 5): ";  std::cin >> opcion;
 
 
-    // Camioneta
-    std::cout << "\n" << "COMPROBACION CAMIONETA" << std::endl;
+        switch(opcion) {
+            case 1: { 
+                std::cout << "\n[NUEVA MOTO]" << std::endl;
+                std::cout << "Marca: ";      std::cin >> t_marca;
+                std::cout << "Modelo: ";     std::cin >> t_modelo;
+                std::cout << "Precio Base(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_precio;
+                std::cout << "Year(SOLO USA NUMEROS ENTEROS): ";        std::cin >> t_year;
+                std::cout << "Kilometraje(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_km;
+                std::cout << "Cilindraje (CC),(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_extra;
 
-    std::cout << "\n" << camioneta_1.get_marca() << std::endl;
-    camioneta_1.set_marca("YA ME QUEDE SIN CREATIVIDAD");
-    std::cout << camioneta_1.get_marca() << std::endl;
+                Moto mo(t_marca, t_modelo, t_precio, t_year, t_km, t_extra);
+            
+                
+               
+                Concesionaria_Benito_Juarez_IDK.agregar_moto(mo);
+                std::cout << ">> Moto agregada" << std::endl;
+                break;
+            }
 
-    std::cout << "\n" << camioneta_1.get_modelo() << std::endl;\
-    camioneta_1.set_modelo("SDAJDSADAJ");
-    std::cout << camioneta_1.get_modelo() << std::endl;
+            case 2: { 
+                std::cout << "\n[NUEVO COCHE]" << std::endl;
+                std::cout << "Marca(NO USES ESPACIOS): ";      std::cin >> t_marca;
+                std::cout << "Modelo: ";     std::cin >> t_modelo;
+                std::cout << "Precio Base(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_precio;
+                std::cout << "Year(SOLO USA NUMEROS ENTEROS): ";        std::cin >> t_year;
+                std::cout << "Kilometraje(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_km;
+                std::cout << "Numero de Puertas(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_extra;
+                
+                Coche co(t_marca, t_modelo, t_precio, t_year, t_km, t_extra);
+           
+                
+                Concesionaria_Benito_Juarez_IDK.agregar_coche(co);
+                std::cout << ">> Coche agregado" << std::endl;
+                break;
+            }
 
-    std::cout << "\n" << camioneta_1.get_precio_original() << std::endl;
-    camioneta_1.set_precio_original(1);
-    std::cout << camioneta_1.get_precio_original() << std::endl;
+            case 3: { 
+                std::cout << "\n[NUEVA CAMIONETA]" << std::endl;
+                std::cout << "Marca: ";     std::cin >> t_marca;
+                std::cout << "Modelo: ";     std::cin >> t_modelo;
+                std::cout << "Precio Base(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_precio;
+                std::cout << "Year(SOLO USA NUMEROS ENTEROS): ";        std::cin >> t_year;
+                std::cout << "Kilometraje(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_km;
+                std::cout << "Capacidad de Carga (L),(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_extra;
 
-    std::cout << "\n" << camioneta_1.get_year() << std::endl;
-    camioneta_1.set_year(1950);
-    std::cout << camioneta_1.get_year() << std::endl;
+                Camioneta ca(t_marca, t_modelo, t_precio, t_year, t_km, t_extra);
 
-    std::cout << "\n" << camioneta_1.get_kilometraje() << std::endl;
-    camioneta_1.set_kilometraje(10);
-    std::cout << camioneta_1.get_kilometraje() << std::endl;
+               
+                
+                Concesionaria_Benito_Juarez_IDK.agregar_camioneta(ca);
+                std::cout << ">> Camioneta agregada" << std::endl;
+                break;
+            }
 
-    std::cout << "\n" << camioneta_1.get_capacidad_carga() << std::endl;
-    camioneta_1.set_capacidad_carga(9999);
-    std::cout << camioneta_1.get_capacidad_carga() << std::endl;
+            case 4: {
+                Concesionaria_Benito_Juarez_IDK.calcular_precios_venta();
+                break;
+            }
+
+            case 5:
+                std::cout << "MENSAJE DE DESPEDIDA GENERICO (•　ω　•) " << std::endl;
+                std::cout << "💔 🫵  🥺 " << std::endl;
+                std::cout << "𝑰 𝒎𝒊𝒔𝒔 𝒚𝒐𝒖  🥺 ❤️ " << std::endl;
+                std::cout << "PERDON POR LA ESQUIZOFRENIA ESTABA ABURRIDO" << std::endl;
+            
+                break;
+
+            default:
+                std::cout << "Selecciona uno de los numero del 1 al 5 (⌣̀_⌣́) )" << std::endl;
+        }
+
+    } while(opcion != 5);
+
+
+    
 
     return 0;
 }
