@@ -13,6 +13,7 @@ El objetivo de este programa es crear un sistema que permita organizar la inform
 # El programa
 
 El programa es un menú desde el cual el usuario puede agregar vehículos, ya sean motos, coches o camionetas, y ver los vehículos en una lista junto con sus precios de venta
+
 POR FAVOR SIGAN LAS INSTRUCCIONES.
 
 # Compilación
@@ -26,6 +27,7 @@ Hasta ahora no he tenido ningún problema al ejecutar el código en VS Code, per
 Terminal:
 
 Recuerda que todos los archivos .h deben estar en la misma carpeta que el archivo main.
+
 Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y aparezcan simbolos extraños, simplemente ignoralos.
 
 `g++ main.cpp -o calculadora`
