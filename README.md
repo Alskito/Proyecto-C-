@@ -18,7 +18,7 @@ POR FAVOR SIGAN LAS INSTRUCCIONES.
 
 # Compilación
 
-El programa solo ha sido probado en Windows, por lo que las instrucciones están pensadas únicamente para este sistema operativo.
+El programa ESTA HECHO PARA WINDOWS, por lo que las instrucciones están pensadas únicamente para este sistema operativo.
 
 Visual studio code:
 
