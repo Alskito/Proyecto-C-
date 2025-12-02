@@ -1,3 +1,15 @@
+/*
+ * Proyecto C++
+ * Alexander Zamudio Cano
+ * A01710688
+ * 2/12/2025
+ */
+
+ /*
+ * Main del proyecto C++, muestra los costos de venta
+ * de distintos vehiculos deppendiendo de sus caracteristicas
+ */
+
 #include<iostream>
 #include<string>
 #include <windows.h> // Solo es para que se vean los emojis
@@ -8,9 +20,10 @@
 int main(){
     SetConsoleOutputCP(CP_UTF8); // Solo es para que se vean los emojis
 
-    Concesionaria Concesionaria_Benito_Juarez_IDK;
-    int opcion = 0;
-    std::string t_marca;
+    Concesionaria Concesionaria_Benito_Juarez_IDK; // Nombre de la concesionaria
+    int opcion = 0; 
+    // Varibles temporales para los cin
+    std::string t_marca; 
     std::string t_modelo;
     int t_precio;
     int t_year;
@@ -18,7 +31,7 @@ int main(){
     int t_extra;
 
     do {
-
+        // Menu para que todo se vea bonito
         std::cout << "\n=================================================" << std::endl;
         std::cout << "      APLICACION PARA GESTIONAR PRECIOS :d     " << std::endl;
         std::cout << "=================================================" << std::endl;
@@ -33,9 +46,10 @@ int main(){
 
         switch(opcion) {
             case 1: { 
+                // Se agrega una moto
                 std::cout << "\n[NUEVA MOTO]" << std::endl;
-                std::cout << "Marca: ";      std::cin >> t_marca;
-                std::cout << "Modelo: ";     std::cin >> t_modelo;
+                std::cout << "Marca(NO USES ESPACIOS): ";      std::cin >> t_marca;
+                std::cout << "Modelo(NO USES ESPACIOS): ";     std::cin >> t_modelo;
                 std::cout << "Precio Base(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_precio;
                 std::cout << "Year(SOLO USA NUMEROS ENTEROS): ";        std::cin >> t_year;
                 std::cout << "Kilometraje(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_km;
@@ -43,17 +57,16 @@ int main(){
 
                 Moto mo(t_marca, t_modelo, t_precio, t_year, t_km, t_extra);
             
-                
-               
                 Concesionaria_Benito_Juarez_IDK.agregar_moto(mo);
                 std::cout << ">> Moto agregada" << std::endl;
                 break;
             }
 
             case 2: { 
+                // Se agrega un coche
                 std::cout << "\n[NUEVO COCHE]" << std::endl;
                 std::cout << "Marca(NO USES ESPACIOS): ";      std::cin >> t_marca;
-                std::cout << "Modelo: ";     std::cin >> t_modelo;
+                std::cout << "Modelo(NO USES ESPACIOS): ";     std::cin >> t_modelo;
                 std::cout << "Precio Base(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_precio;
                 std::cout << "Year(SOLO USA NUMEROS ENTEROS): ";        std::cin >> t_year;
                 std::cout << "Kilometraje(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_km;
@@ -68,9 +81,10 @@ int main(){
             }
 
             case 3: { 
+                // Se agrega un camioneta
                 std::cout << "\n[NUEVA CAMIONETA]" << std::endl;
-                std::cout << "Marca: ";     std::cin >> t_marca;
-                std::cout << "Modelo: ";     std::cin >> t_modelo;
+                std::cout << "Marca(NO USES ESPACIOS): ";     std::cin >> t_marca;
+                std::cout << "Modelo(NO USES ESPACIOS): ";     std::cin >> t_modelo;
                 std::cout << "Precio Base(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_precio;
                 std::cout << "Year(SOLO USA NUMEROS ENTEROS): ";        std::cin >> t_year;
                 std::cout << "Kilometraje(SOLO USA NUMEROS ENTEROS): "; std::cin >> t_km;
@@ -86,20 +100,23 @@ int main(){
             }
 
             case 4: {
-                Concesionaria_Benito_Juarez_IDK.calcular_precios_venta();
+                // Muestra los precios de todo a manera de lista
+                Concesionaria_Benito_Juarez_IDK.mostrar_precios_venta();
                 break;
             }
 
-            case 5:
+            case 5:{
+                // Mensajito de despedida :D
                 std::cout << "MENSAJE DE DESPEDIDA GENERICO (•　ω　•) " << std::endl;
                 std::cout << "💔 🫵  🥺 " << std::endl;
                 std::cout << "𝑰 𝒎𝒊𝒔𝒔 𝒚𝒐𝒖  🥺 ❤️ " << std::endl;
                 std::cout << "PERDON POR LA ESQUIZOFRENIA ESTABA ABURRIDO" << std::endl;
             
                 break;
-
+            }
             default:
                 std::cout << "Selecciona uno de los numero del 1 al 5 (⌣̀_⌣́) )" << std::endl;
+            
         }
 
     } while(opcion != 5);
@@ -109,3 +126,5 @@ int main(){
 
     return 0;
 }
+
+
