@@ -46,7 +46,8 @@ void Coche::set_puertas(int pu){
     puertas = pu;
 }
 
-// Se calcula el precio de venta del coche
+// Se calcula el precio de venta del coche 
+// La formula es inventada
 float Coche::calcular_precio_venta(){
     float precio = get_precio_original();
     int antiguedad = 2025 - get_year();
@@ -65,5 +66,6 @@ std::string Coche::toString(){
     aux << Vehiculo::toString() << " | Puertas: " << puertas;
     return aux.str();
 }
+
 
 
