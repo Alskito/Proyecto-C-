@@ -46,6 +46,7 @@ void Moto::set_cc(int c){
 }
 
 // Se calcula el precio de venta de la moto
+// La formula es inventada
 float Moto::calcular_precio_venta(){
     float precio = get_precio_original();
     int antiguedad = 2025 - get_year();
@@ -58,3 +59,4 @@ std::string Moto::toString(){
     aux << Vehiculo::toString() << " | CC: " << cc;
     return aux.str();
 }
+
