@@ -46,6 +46,7 @@ void Camioneta ::set_capacidad_carga(int cap){
 }
 
 // Se calcula el precio de venta del camioneta
+// La formula es inventada
 float Camioneta::calcular_precio_venta(){
     float precio = get_precio_original();
     int antiguedad = 2025 - get_year();
@@ -59,4 +60,5 @@ std::string Camioneta::toString(){
     aux << Vehiculo::toString() << " | Capacidad de carga: " << capacidad_carga;
     return aux.str();
 }
+
 
