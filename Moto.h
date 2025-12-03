@@ -26,7 +26,9 @@ class Moto: public Vehiculo{
         // Constructor default
         Moto(): Vehiculo(), cc(0) {};
         // Constructor
-        Moto(std::string mar, std::string mod, int pre, int ye, int kil, int c): Vehiculo(mar, mod, pre, ye, kil), cc(c){};
+        Moto(std::string mar, std::string mod, int pre, 
+            int ye, int kil, int c)
+            : Vehiculo(mar, mod, pre, ye, kil), cc(c){};
 
         float calcular_precio_venta();
         int get_cc();
@@ -49,10 +51,25 @@ void Moto::set_cc(int c){
 // La formula es inventada
 float Moto::calcular_precio_venta(){
     float precio = get_precio_original();
-    int antiguedad = 2025 - get_year();
-    float uso = (get_kilometraje() / 10000.0) * 500; 
-    return precio - (antiguedad * 1000) - uso + (cc * 10);
+    float antiguedad = (2025 - get_year()) * 0.05;
+    float uso = (get_kilometraje() / 1000.0) * 0.001; 
+    float porcentaje = 1.0 - antiguedad - uso;
+    float venta = precio * porcentaje + (cc * 2);
+
+    // El valor minimo es el 15 % del precio original
+    if(venta < (precio * 0.15)){
+        return precio * 0.15;
+    }
+
+    // El valor maximo es el precio original
+    if (venta > precio) {
+        return precio;
+    }
+
+    return venta;
+
 }
+
 // Agrega el valor de cc al string
 std::string Moto::toString(){
     std::stringstream aux;
