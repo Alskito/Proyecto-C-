@@ -26,7 +26,9 @@ class Camioneta: public Vehiculo {
         // Constructor default
         Camioneta (): Vehiculo(), capacidad_carga(0){};
         // Constructor
-        Camioneta (std::string mar, std::string mod, int pre, int ye, int kil, int cap): Vehiculo(mar, mod, pre, ye, kil), capacidad_carga(cap) {};
+        Camioneta (std::string mar, std::string mod, int pre, 
+                int ye, int kil, int cap) 
+                : Vehiculo(mar, mod, pre, ye, kil), capacidad_carga(cap) {};
 
         float calcular_precio_venta();
         int get_capacidad_carga();
@@ -49,16 +51,29 @@ void Camioneta ::set_capacidad_carga(int cap){
 // La formula es inventada
 float Camioneta::calcular_precio_venta(){
     float precio = get_precio_original();
-    int antiguedad = 2025 - get_year();
-    float uso = (get_kilometraje() / 10000.0) * 500; 
-    return precio - (antiguedad * 1000) - uso + (capacidad_carga * 1.5);
+    float antiguedad = (2025 - get_year()) * 0.05;
+    float uso = (get_kilometraje() / 1000.0) * 0.001; 
+    float porcentaje = 1.0 - antiguedad - uso;
+    float venta = precio * porcentaje + (capacidad_carga * 1.5);
+        
+    // El valor minimo es el 15 % del precio original
+    if(venta < (precio * 0.15)){
+        return precio * 0.15;
+    }
+
+    // El valor maximo es el precio original
+    if (venta > precio) {
+        return precio;
+    }
+
+    return venta;
 }
+
 
 // Agrega el valor de capacidad_carga al string
 std::string Camioneta::toString(){
     std::stringstream aux;
-    aux << Vehiculo::toString() << " | Capacidad de carga: " << capacidad_carga;
+    aux << Vehiculo::toString() << " | Capacidad de carga: " 
+    << capacidad_carga;
     return aux.str();
 }
-
-
