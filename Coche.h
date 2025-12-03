@@ -26,7 +26,9 @@ class Coche: public Vehiculo{
         // Constructor default
         Coche(): Vehiculo(), puertas(0){};
         // Constructor
-        Coche(std::string mar, std::string mod, int pre, int ye, int kil, int pu): Vehiculo(mar, mod, pre, ye, kil), puertas(pu){};
+        Coche(std::string mar, std::string mod, int pre, int ye, 
+            int kil, int pu)
+            : Vehiculo(mar, mod, pre, ye, kil), puertas(pu){};
 
 
         float calcular_precio_venta();
@@ -50,15 +52,29 @@ void Coche::set_puertas(int pu){
 // La formula es inventada
 float Coche::calcular_precio_venta(){
     float precio = get_precio_original();
-    int antiguedad = 2025 - get_year();
-    float uso = (get_kilometraje() / 10000.0) * 500; 
+    float antiguedad = (2025 - get_year()) * 0.05;
+    float uso = (get_kilometraje() / 1000.0) * 0.001; 
+    float porcentaje = 1.0 - antiguedad - uso;
+    float venta = precio * porcentaje;
+
     if(puertas == 4){
-        return precio - (antiguedad * 1000) - uso + 500;
+        venta += 500;
     }
-    else{
-        return precio - (antiguedad * 1000) - uso;
+
+    // El valor minimo es el 15 % del precio original
+    if(venta < (precio * 0.15)){
+        return precio * 0.15;
     }
+
+    // El valor maximo es el precio original
+    if (venta > precio) {
+        return precio;
+    }
+
+    return venta;
+
 }
+
 
 // Agrega el valor de puertas al string
 std::string Coche::toString(){
