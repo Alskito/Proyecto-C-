@@ -1,4 +1,3 @@
-
 /*
  * Proyecto C++
  * Alexander Zamudio Cano
@@ -31,9 +30,13 @@ class Vehiculo {
     public:
         // Se decalran sus metodos
         // Constructor default
-        Vehiculo(): marca(""), modelo(""), precio_original(0), year(0), kilometraje(0) {}; 
+        Vehiculo(): marca(""), modelo(""), 
+        precio_original(0), year(0), kilometraje(0) {}; 
         // Constructor
-        Vehiculo(std::string mar, std::string mod, int pre, int ye, int kil): marca(mar), modelo(mod), precio_original(pre), year(ye), kilometraje(kil) {};
+        Vehiculo(std::string mar, std::string mod, int pre, 
+            int ye, int kil)
+            : marca(mar), modelo(mod), precio_original(pre), 
+            year(ye), kilometraje(kil) {};
 
         // Setters y getters
         std::string get_marca();
@@ -94,7 +97,8 @@ void Vehiculo ::set_kilometraje(int kil){
 // Almacena los valores de los atributos en un string
 std::string Vehiculo::toString(){
     std::stringstream aux;
-    aux << marca << " " << modelo << " (" << year << ") " << kilometraje << "km";
+    aux << marca << " " << modelo << " (" << year 
+    << ") " << kilometraje << "km";
     return aux.str();
 }
 
