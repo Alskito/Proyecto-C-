@@ -33,3 +33,9 @@ Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y apare
 `g++ main.cpp -o calculadora`
 
 `.\calculadora.exe`
+
+
+# Compilación otros OS
+Repositorio del codigo sin emojis, deberia de funcionar en los demas sistemas operativos:
+
+`https://github.com/Alskito/Proyecto-C-Sin-emojis-`
