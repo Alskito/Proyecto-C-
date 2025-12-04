@@ -23,8 +23,6 @@ POR FAVOR SIGAN LAS INSTRUCCIONES.
 
 # Compilación
 
-El programa ESTA HECHO PARA WINDOWS, por lo que las instrucciones están pensadas únicamente para este sistema operativo.
-
 Visual studio code:
 
 Hasta ahora no he tenido ningún problema al ejecutar el código en VS Code, pero recomiendo usar la terminal de Windows por si acaso.
@@ -33,7 +31,7 @@ Terminal:
 
 Recuerda que todos los archivos .h deben estar en la misma carpeta que el archivo main.
 
-Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y aparezcan simbolos extraños, simplemente ignoralos.
+Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y aparezcan simbolos extraños, simplemente ignoralos o usa la version sin emojis.
 
 `g++ main.cpp -o calculadora`
 
