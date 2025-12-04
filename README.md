@@ -1,3 +1,8 @@
+# SOLAMENTE USAR WINDOWS
+ESTE PROGRAMA FUNCIONA EXCLUSIVAMENTE EN WINDOWS debido a que contiene emojis, en caso de que uses otro sistema operatico, aqui esta la version que no contiene emojis:
+
+`https://github.com/Alskito/Proyecto-C-Sin-emojis-`
+
 # Caculadora de precio de venta 
 
 Una empresa quiere determinar el precio por el cual puede vender diferentes vehículos.
@@ -35,7 +40,5 @@ Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y apare
 `.\calculadora.exe`
 
 
-# Compilación otros OS
-Repositorio del codigo sin emojis, deberia de funcionar en los demas sistemas operativos:
 
-`https://github.com/Alskito/Proyecto-C-Sin-emojis-`
+
