@@ -42,6 +42,52 @@ Añadi emojis para que todo se vea mas bonito, puede que no carguen bien y apare
 
 `.\calculadora.exe`
 
+# Correcciones
+
+============================ Nov 20, 2025 =====================================
+Sub-Competencia: 
+  avance 1  (Creación de Objetos)
+
+Error original: El readme no estaba completo
+
+
+Cambio realizado: Se agrego la seccion compilacion
+
+
+
+============================ Nov 20, 2025 =====================================
+Sub-Competencia: 
+  avance 2 (Creación de Diagrama de clases)
+
+Error original: En la clase camioneta el tipo de dato del getter no es correcto
+
+
+Cambio realizado: En el archivo camioneta.h se cambio el tipo de dato de capacidad_carga a int
+
+
+Líneas de código donde se ve la corrección: 6, 9, 10, 13, 15, 19 y 24
+
+============================ Dec 2, 2025 =====================================
+Sub-Competencia: 
+   avance 3 (Integración de Herencia)
+
+Error original:  Composición está mal implementada(Hice agregacion)
+
+
+Cambio realizado: En el archivo Concesionaria.h‎, en el primer commit, se eliminan los atributos para calcular el precio, ahora se calcula todo dentro del metodo.
+
+Líneas de código donde se ve la corrección: 80 - 101
+
+Cambio realizado: En el archivo Concesionaria.h‎, en el segundo commit, se agregaron los & para que sea agregacion y tambien se corrigio el UML
+
+Líneas de código donde se ve la corrección: 42 - 44, 50, 62 y 74 
+
+============================ Dec 4, 2025 =====================================
+Entrega final
+
+Cambio realizado: Se agregaron comentarios en todos los archivos, todas las lineas se modificaron para tengan menos de 79 caracteres, se cambio el nombre del metodo toString a to_string, se agrego el UML al readme y se creo el repositorio con la version sin emojis.
+
+Líneas de código donde se ve la corrección: Todo el codigo
 
 
 
