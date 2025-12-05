@@ -1,5 +1,5 @@
 # SOLAMENTE USAR WINDOWS
-ESTE PROGRAMA FUNCIONA EXCLUSIVAMENTE EN WINDOWS debido a que contiene emojis, en caso de que uses otro sistema operatico, aqui esta la version que no contiene emojis:
+ESTE PROGRAMA FUNCIONA EXCLUSIVAMENTE EN WINDOWS debido a que contiene emojis, en caso de que uses otro sistema operativo, aqui esta la version que no contiene emojis:
 
 `https://github.com/Alskito/Proyecto-C-Sin-emojis-`
 
